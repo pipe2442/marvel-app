@@ -7,9 +7,10 @@ export const fetchComics = async (): Promise<Result[]> => {
   const response = await fetch(MARVEL_API_URL);
   const comicsList = await response.json();
 
-  const data = comicsList.data.results.filter((comic: Result) => {
-    return comic.thumbnail.path.split("/")[10] !== "image_not_available";
-  });
+  // const data = comicsList.data.results.filter((comic: Result) => {
+  //   return comic.thumbnail.path.split("/")[10] !== "image_not_available";
+  // });
 
-  return data;
+  // return data;
+  return comicsList
 };
