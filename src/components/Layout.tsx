@@ -13,7 +13,6 @@ const Layout: React.FC<LayoutProps> = () => {
   useEffect(() => {
     fetchComics().then((comics) => setComics(comics));
   }, []);
-  console.log(comics);
 
   // User is currently on this page
   const [currentPage, setCurrentPage] = useState(1); // No of Records to be displayed on each page

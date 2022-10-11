@@ -8,7 +8,6 @@ export const fetchComics = async (): Promise<Result[]> => {
   const comicsList = await response.json();
 
   const data = comicsList.data.results.filter((comic: Result) => {
-    console.log(comic.thumbnail.path.split("/"));
     return comic.thumbnail.path.split("/")[10] !== "image_not_available";
   });
 
