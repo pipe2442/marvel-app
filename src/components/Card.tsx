@@ -11,6 +11,8 @@ const Card: React.FC<CardProps> = ({ comic }) => {
     thumbnail: { path: thumb },
     thumbnail: { extension: ext },
     title,
+    id,
+    issueNumber,
   } = comic;
 
   const imageSrc = `${thumb}.${ext}`;
@@ -29,6 +31,12 @@ const Card: React.FC<CardProps> = ({ comic }) => {
           noOfLines={1}
         >
           {title}
+        </Box>
+        <Box w="360px" mx="auto" mt="1" as="p" lineHeight="tight" noOfLines={1}>
+          Id: {id}
+        </Box>
+        <Box w="360px" mx="auto" mt="1" as="p" lineHeight="tight" noOfLines={1}>
+          IssueNumber: {issueNumber}
         </Box>
       </Box>
     </Box>
